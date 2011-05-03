@@ -23,6 +23,10 @@ note() {
 }
 
 new-note() {
+    edit-note $1
+}
+
+edit-note() {
     emacs $NOTES_DIR/$1.txt
 }
 
@@ -46,3 +50,4 @@ _note_complete() {
 }
 
 complete -F _note_complete note
+complete -F _note_complete edit-note
