@@ -1,0 +1,7 @@
+Notes in Bash
+
+Notes from the terminal, anywhere, including note tab completion.
+
+Update NOTES_DIR in the notes file and add:
+source <PATH_TO_NOTES>/notes
+to your .bash_rc or similar to use.
