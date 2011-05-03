@@ -6,7 +6,7 @@
 NOTES_DIR=~/notes
 
 notes() {
-  find_notes
+  _find_notes
   for i in "${NOTES[@]}"
   do
       echo "$i"
@@ -22,7 +22,11 @@ note() {
     fi
 }
 
-find_notes() {
+new-note() {
+    emacs $NOTES_DIR/$1.txt
+}
+
+_find_notes() {
     NOTES=()
     for i in `(find $NOTES_DIR -name '*.txt')`
     do
@@ -32,17 +36,13 @@ find_notes() {
 
 _note_complete() {
     local cur prev opts
-    find_notes
+    _find_notes
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
     opts="${NOTES[@]}"
     COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
     return 0
-}
-
-new_note() {
-    emacs $NOTES_DIR/$1.txt
 }
 
 complete -F _note_complete note
