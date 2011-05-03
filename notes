@@ -3,7 +3,7 @@
 # Notes!!!
 #
 
-NOTES_DIR=~/notes
+NOTES_DIR=~/.notes
 
 notes() {
   _find_notes
