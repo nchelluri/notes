@@ -2,6 +2,19 @@ Notes in Bash
 
 Notes from the terminal, anywhere, including note tab completion.
 
-Update NOTES_DIR in the notes file and add:
-source <PATH_TO_NOTES>/notes
-to your .bash_rc or similar to use.
+To install:
+
+1. Move this folder (notes) to ~/bin
+2. Create the directory ~/.notes
+3. Add: "source ~/bin/notes/notes" (no quotes) to your ~/.bashrc file
+
+Done!
+
+Now from Terminal you can do:
+
+notes          # to list all notes
+new-note asdf  # to create a note named asdf
+note as<TAB>   # to view the note named asdf
+edit-note asdf # to edit the note named asdf
+
+The End
