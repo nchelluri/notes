@@ -6,7 +6,8 @@ To install:
 
 1. Move this folder (notes) to ~/bin
 2. Create the directory ~/.notes
-3. Add: "source ~/bin/notes/notes" (no quotes) to your ~/.profile or ~/.bash_profile file
+3. Add: "source ~/bin/notes/notes" (no quotes) to your ~/.bashrc file.
+4. Open a new terminal.
 
 Done!
 
