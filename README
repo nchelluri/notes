@@ -1,20 +1,23 @@
 Notes in Bash
+-------------
 
 Quick Notes from the terminal, anywhere.
 
-To install:
+Installing
+----------
 
-1. Move this folder (notes) to ~/bin
-2. Create the directory ~/.notes
-3. Add: "source ~/bin/notes/notes" (no quotes) to your ~/.profile or ~/.bash_profile file
+1. `git clone https://github.com/nchelluri/notes.git ~/bin`
+2. `mkdir ~/.notes`
+3. Add `source ~/bin/notes/notes` to `~/.profile` **or** `~/.bash_profile`
 
-Done!
+Using
+--------
 
-Now from Terminal you can do:
+Now you should be able to use Notes, like so:
 
-notes          # to list all notes
-new-note asdf  # to create a note named asdf
-note as<TAB>   # to view the note named asdf
-edit-note asdf # to edit the note named asdf
+    notes              # to list all notes
+    new-note asdf      # to create a note named asdf
+    note as<TAB>       # to view the note named asdf
+    edit-note asdf     # to edit the note named asdf
 
 The End
