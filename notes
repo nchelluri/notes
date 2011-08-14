@@ -32,7 +32,7 @@ edit-note() {
 
 _find_notes() {
     NOTES=()
-    for i in `(find $NOTES_DIR -name '*.txt')`
+    for i in `(find $NOTES_DIR -name '*.txt' -not -path $NOTES_DIR'/.archive/*')`
     do
         NOTES=("${NOTES[@]}" "`basename $i .txt`")
     done
