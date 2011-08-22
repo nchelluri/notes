@@ -30,6 +30,11 @@ edit-note() {
     emacs $NOTES_DIR/$1.txt
 }
 
+archive-note() {
+    mkdir -p $NOTES_DIR/.archive
+    mv $NOTES_DIR/$1.txt $NOTES_DIR/.archive
+}
+
 _find_notes() {
     NOTES=()
     for i in `(find $NOTES_DIR -name '*.txt' -not -path $NOTES_DIR'/.archive/*')`
@@ -51,3 +56,4 @@ _note_complete() {
 
 complete -F _note_complete note
 complete -F _note_complete edit-note
+complete -F _note_complete archive-note
