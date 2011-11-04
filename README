@@ -5,10 +5,15 @@ Quick Notes from the terminal, anywhere.
 
 Installing
 ----------
+Run the following:
+git clone https://github.com/nchelluri/notes.git ~/bin/notes
+mkdir ~/.notes
 
-1. `git clone https://github.com/nchelluri/notes.git ~/bin`
-2. `mkdir ~/.notes`
-3. Add `source ~/bin/notes/notes` to `~/.profile` **or** `~/.bash_profile`
+Then add:
+source ~/bin/notes/notes
+to ~/.profile or ~/.bash_profile
+
+Done.
 
 Using
 -----
