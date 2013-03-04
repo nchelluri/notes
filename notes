@@ -27,7 +27,7 @@ new-note() {
 }
 
 edit-note() {
-    emacs $NOTES_DIR/$1.txt
+    ${EDITOR:-emacs} $NOTES_DIR/$1.txt
 }
 
 archive-note() {
