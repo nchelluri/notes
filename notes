@@ -32,7 +32,7 @@ edit-note() {
 
 archive-note() {
     mkdir -p $NOTES_DIR/.archive
-    mv $NOTES_DIR/$1.txt $NOTES_DIR/.archive
+    mv -i $NOTES_DIR/$1.txt $NOTES_DIR/.archive
 }
 
 _find_notes() {
