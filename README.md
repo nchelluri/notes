@@ -1,4 +1,5 @@
-# Notes in Bash
+Notes in Bash
+=============
 
 Quick Notes from the terminal, anywhere.
 
