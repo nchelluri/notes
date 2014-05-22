@@ -17,9 +17,7 @@ Then add:
     source ~/bin/notes/notes
 ```
 
-to `~/.profile` or `~/.bash_profile`
-
-Done.
+to `~/.profile` or `~/.bash_profile`.
 
 ### Using
 Now you should be able to use Notes, like so:
