@@ -16,7 +16,7 @@ notes() {
 note() {
     if [ -e "$NOTES_DIR/$1.txt" ]
     then
-        cat $NOTES_DIR/$1.txt
+        ${PAGER:-less} $NOTES_DIR/$1.txt
     else
         notes
     fi
