@@ -14,7 +14,7 @@ Then add:
 
     source ~/bin/notes/notes
 
-to ~/.profile or ~/.bash_profile
+to `~/.profile` or `~/.bash_profile`
 
 Done.
 
