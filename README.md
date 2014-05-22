@@ -14,7 +14,7 @@ mkdir ~/.notes
 Then add:
 
 ```bash
-    source ~/bin/notes/notes
+source ~/bin/notes/notes
 ```
 
 to `~/.profile` or `~/.bash_profile`.
