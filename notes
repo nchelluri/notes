@@ -16,30 +16,30 @@ notes() {
 note() {
     if [ -e "$NOTES_DIR/$1.txt" ]
     then
-        ${PAGER:-less} $NOTES_DIR/$1.txt
+        ${PAGER:-less} "$NOTES_DIR/$1.txt"
     else
         notes
     fi
 }
 
 new-note() {
-    edit-note $1
+    edit-note "$1"
 }
 
 edit-note() {
-    ${EDITOR:-emacs} $NOTES_DIR/$1.txt
+    ${EDITOR:-emacs} "$NOTES_DIR/$1.txt"
 }
 
 archive-note() {
-    mkdir -p $NOTES_DIR/.archive
-    mv -i $NOTES_DIR/$1.txt $NOTES_DIR/.archive
+    mkdir -p "$NOTES_DIR/.archive"
+    mv -i "$NOTES_DIR/$1.txt" "$NOTES_DIR/.archive"
 }
 
 _find_notes() {
     NOTES=()
-    for i in `(find $NOTES_DIR -name '*.txt' -not -path $NOTES_DIR'/.archive/*')`
+    for i in `(find "$NOTES_DIR" -name '*.txt' -not -path "$NOTES_DIR"'/.archive/*')`
     do
-        NOTES=("${NOTES[@]}" "`basename $i .txt`")
+        NOTES=("${NOTES[@]}" "`basename "$i" .txt`")
     done
 }
 
@@ -50,7 +50,7 @@ _note_complete() {
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
     opts="${NOTES[@]}"
-    COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+    COMPREPLY=( $(compgen -W "${opts}" -- "${cur}") )
     return 0
 }
 
